@@ -57,6 +57,24 @@ class MyWidget extends StatelessWidget {
        ),
       ),
     ),
+      ElevatedButton(
+     style: raisedButtonStyle,
+       onPressed:() {},
+       child: const Text('Adicionar á Lista')
+     )
+    ]);
+  }
+}
+final ButtonStyle raisedButtonStyle = ElevatedButton. styleFrom(
+ onPrimary: Colors.black87,
+  primary: Colors.red[300],
+  minimumSize: const Size (88,36),
+  padding: const EdgeInsets.symmetric(horizontal: 300),
+  shape: const RoundedRectangleBorder(
+   borderRadius: BorderRadius.all( Radius.circular(5)),
+    ),
+  );
+
       Image.network(
       "https://th.bing.com/th/id/OIP.BddBKXCUqSU2G66k6wbI5gHaEv?pid=ImgDet&rs=1"),
       
