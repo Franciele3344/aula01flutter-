@@ -1,0 +1,146 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+BoxDecoration myDecoration (Color color, double radius, String image) {
+  return BoxDecoration(
+    image: DecorationImage(
+      image: NetworkImage(
+        image),
+      fit: BoxFit.fill,
+      ),
+                       color: color,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(radius),
+                   ));
+}
+const double altura = 50;
+const double largura = 50;
+   
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: MyWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Colors.white,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                decoration: myDecoration (Colors.pink, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                height:  altura,
+                width: 150,
+              ),
+              Row(
+                  //   crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      decoration: myDecoration (Colors.pink, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                    Container(
+                      decoration: myDecoration  (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                  ]),
+              Container(
+                decoration: myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif") ,
+                height:  altura,
+                width: 150,
+              ),
+              Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      decoration: myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                    Container(
+                      decoration: myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                    Container(
+                      decoration: myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                    Container(
+                      decoration:myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                      height:  altura,
+                      width: 50,
+                    ),
+                  ]),
+              Container(
+                  width: 200,
+                  decoration: myDecoration (Colors.pink, 24.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                  child: Column(children: [
+                        const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration:myDecoration (Colors.blue, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                            height: altura,
+                            width: 50,
+                          ),
+                          Container(
+                            decoration: myDecoration (Colors.blue, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                            height:  altura,
+                            width: 50,
+                          ),
+                        ]),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration: myDecoration (Colors.blue, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                            height: altura,
+                            width: 50,
+                          ),
+                          Container(
+                            decoration: myDecoration (Colors.blue, 10.0, "https://media2.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif"),
+                            height:  altura,
+                            width: 50,
+                          ),
+                      
+                        ]),
+                        const SizedBox(
+                      height: 20,
+                    ),
+                  ]))
+            ]));
+  }
+}
